@@ -1,21 +1,26 @@
-<script context="module" lang="ts">
+<!-- <script context="module" lang="ts">
     import i18next from 'i18next';
     import {Set,Get} from "$module/store.svelte"
 
     import en from "$i18n/en.json";
     import zh from "$i18n/zh.json";
-    export let lang : string = await Get("lang");
-    if (lang == null) {
-        lang = "zh";
-        await Set("lang","zh");
-    }
-    i18next.init({
+    export let lang : string ;
+    (async () => {
+        lang = await Get("lang");
+        if (lang == null) {
+            lang = "zh";
+            await Set("lang","zh");
+        }
+        i18next.init({
         lng: lang,
         resources: {
             en: {translation: en},
             zh: {translation: zh}
         }
     });
+    })();
+
+ 
     
   
     export const availableLanguages = ['en', 'zh'];
@@ -30,4 +35,4 @@
     export function t(key: string): string {
       return i18next.t(key);
     }
-  </script>
+  </script> -->

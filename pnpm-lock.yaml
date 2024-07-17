@@ -23,6 +23,9 @@ importers:
       i18next:
         specifier: ^23.12.1
         version: 23.12.1
+      svelte-i18next:
+        specifier: ^2.2.2
+        version: 2.2.2(i18next@23.12.1)(svelte@4.2.18)
       tauri-plugin-store-api:
         specifier: github:tauri-apps/tauri-plugin-store#v1
         version: https://codeload.github.com/tauri-apps/tauri-plugin-store/tar.gz/5f5404feea43b6cddd65e4171f52e92ca161a2aa
@@ -1120,6 +1123,12 @@ packages:
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
 
+  svelte-i18next@2.2.2:
+    resolution: {integrity: sha512-IpJDZCH5cCgKfHQHgiLmGT4j9HCdg4fqsP3oP2deLu8PxmNj0Ui6khMiDoxAxedAiYEhr0xendv2xqh3Rq+uQQ==}
+    peerDependencies:
+      i18next: '*'
+      svelte: '*'
+
   svelte-preprocess@5.1.4:
     resolution: {integrity: sha512-IvnbQ6D6Ao3Gg6ftiM5tdbR6aAETwjhHV+UKGf5bHGYR69RQvF1ho0JKPcbUON4vy4R7zom13jPjgdOWCQ5hDA==}
     engines: {node: '>= 16.0.0'}
@@ -2199,6 +2208,11 @@ snapshots:
 
   svelte-hmr@0.16.0(svelte@4.2.18):
     dependencies:
+      svelte: 4.2.18
+
+  svelte-i18next@2.2.2(i18next@23.12.1)(svelte@4.2.18):
+    dependencies:
+      i18next: 23.12.1
       svelte: 4.2.18
 
   svelte-preprocess@5.1.4(postcss-load-config@4.0.2(postcss@8.4.39))(postcss@8.4.39)(svelte@4.2.18)(typescript@5.5.3):

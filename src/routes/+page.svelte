@@ -1,5 +1,6 @@
 <script lang="ts">
     import Header from "$components/Header.svelte";
+    
     import {Page} from "$lib/types";
     import {Set,Get} from "$module/store.svelte"
     import { onMount } from "svelte";

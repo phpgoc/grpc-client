@@ -1,23 +1,13 @@
 <script lang="ts">
 
-    import {t} from "$module/i18n.svelte";
+    // import {t} from "$module/i18n.svelte";
 
     import {Page} from "$lib/types";
+    import {t} from "i18next"
 
   // 使用枚举作为属性类型
-  export let page: Page;
-  function isActive(pageValue:Page) {
-    switch(pageValue) {
-      case Page.Upload:
-        return "/upload";
-      case Page.Call:
-        return "/call"; // Assuming there's a route for call, adjust as necessary
-      case Page.Settings:
-        return "/settings";
-      default:
-        return "/";
-    }
-  }
+  export let page: Page = Page.Index;
+
 </script>
   
   <div class="flex justify-between p-5 bg-gray-100">

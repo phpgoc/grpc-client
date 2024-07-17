@@ -1,6 +1,7 @@
 <script lang="ts">
     import Header from "$components/Header.svelte";
-    import {t,availableLanguages,changeLanguage,lang} from '$module/i18n.svelte';
+    import {t } from 'i18next';
+    import {availableLanguages,changeLanguage, lang} from "$lib/i18n.ts";
     import {Page} from "$lib/types";
    
 
