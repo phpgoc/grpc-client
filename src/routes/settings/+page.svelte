@@ -1,28 +1,25 @@
 <script lang="ts">
     import Header from "$components/Header.svelte";
-    import {t,availableLanguages,changeLanguage} from '$module/i18n.svelte';
+    import {t,availableLanguages,changeLanguage,lang} from '$module/i18n.svelte';
+    import {Page} from "$lib/types";
    
 
-    let selectedLanguage = availableLanguages[0]; // 默认选择第一种语言
+    let selectedLanguage = lang; // 默认选择第一种语言
     let b = false
     function handleLanguageChange() {
       // window.alert(selectedLanguage);
-        console.log (123)
         b = changeLanguage(selectedLanguage)
-        count ++
     }
-    let count = 0;
 </script>
 
-<Header />
+<Header page={Page.Settings} />
 <div class="full-width">
   <p class="larger-text"> 选择语言</p>
   <select bind:value={selectedLanguage} >
   {#each availableLanguages as language}
-    <option value={language}>{language.toUpperCase()}</option>
+    <option value={language} selected={language === selectedLanguage} >{language.toUpperCase() }</option>
   {/each}
   </select>
-  {count}
   <button on:click={handleLanguageChange}>确定</button>
 </div>
 

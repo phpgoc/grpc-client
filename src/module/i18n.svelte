@@ -4,7 +4,7 @@
 
     import en from "$i18n/en.json";
     import zh from "$i18n/zh.json";
-    let lang : string = await Get("lang");
+    export let lang : string = await Get("lang");
     if (lang == null) {
         lang = "zh";
         await Set("lang","zh");

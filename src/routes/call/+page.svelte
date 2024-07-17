@@ -4,5 +4,5 @@
     import {Page} from "$lib/types";
 </script>
 
-<Header page={Page.Upload} />
-{t("upload")}
+<Header page={Page.Call} />
+{t("call")}
