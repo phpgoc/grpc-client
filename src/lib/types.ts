@@ -1,6 +1,6 @@
 export enum Page {
-  Index = "index",
-  Upload = "upload",
-  Call = "call",
-  Settings = "settings",
+  Index = 1,
+  Upload = 2,
+  Call = 3,
+  Settings = 4,
 }

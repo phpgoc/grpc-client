@@ -3,31 +3,35 @@ import { createI18nStore } from "svelte-i18next";
 import en from "$i18n/en.json";
 import zh from "$i18n/zh.json";
 
-export let lang: string = "zh";
+import {Get , Set} from "$module/store.svelte";
 
-i18next.init({
-  lng: lang,
-  resources: {
-    en: {
-      translation: en,
-    },
+export let lang: string="zh" ;
 
-    zh: {
-      translation: zh,
+export  async function initializeI18next() {
+  lang = await Get("lang") || "zh";
+  await i18next.init({
+    lng: lang,
+    resources: {
+      en: {
+        translation: en,
+      },
+      zh: {
+        translation: zh,
+      },
     },
-  },
-  interpolation: {
-    escapeValue: false, // not needed for svelte as it escapes by default
-  },
-});
+    interpolation: {
+      escapeValue: false, // not needed for svelte as it escapes by default
+    },
+  });
+}
 
 export default () => createI18nStore(i18next);
 
 export const availableLanguages = ["en", "zh"];
 
-export function changeLanguage(i_lang: string): boolean {
+export  async function changeLanguage(i_lang: string):Promise< boolean> {
   i18next.language = i_lang;
   console.log(i18next.language);
-  // Set("lang",i_lang);
+   await  Set("lang", i_lang);
   return i_lang == "en";
 }

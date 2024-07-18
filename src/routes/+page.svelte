@@ -4,9 +4,12 @@
   import { Page } from "$lib/types";
   import { Set, Get } from "$module/store.svelte";
   import { onMount } from "svelte";
-  let url: string = "";
-  let download_path: string = "";
+  import {initializeI18next} from "$lib/i18n";
+
+  let url: string | null = "";
+  let download_path: string | null = "";
   onMount(async () => {
+    await initializeI18next();
     url = await Get("url");
     download_path = await Get("download_path");
   });
