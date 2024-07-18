@@ -6,7 +6,7 @@
   import { Page } from "$lib/types";
   import { goto } from "$app/navigation";
 
-  let selectedLanguage = lang; // 默认选择第一种语言
+  let selectedLanguage = lang;
   function handleLanguageChange() {
     // window.alert(selectedLanguage);
     changeLanguage(selectedLanguage).then(() => {
@@ -17,7 +17,7 @@
 
 <Header page={Page.Settings} />
 <div class="full-width">
-  <p class="larger-text">选择语言</p>
+  <p class="larger-text">{t("please_select")}</p>
   <select bind:value={selectedLanguage}>
     {#each availableLanguages as language}
       <option value={language} selected={language === selectedLanguage}
@@ -29,14 +29,6 @@
 </div>
 
 <style>
-  .full-width {
-    display: flex;
-    justify-content: space-between; /* 使子元素横向铺满整个窗口 */
-    align-items: center; /* 垂直居中 */
-    width: 100%;
-    padding: 0 15% 0 1%;
-    margin-bottom: 30px;
-  }
   .larger-text {
     font-size: 150%; /* 比其他元素大50% */
   }

@@ -42,6 +42,17 @@
 </div>
 
 <style>
+  .nav-link,
+  .active {
+    font-weight: 900; /* 加粗3倍，使用最粗的字体权重 */
+    font-size: 2em; /* 增大字体大小 */
+    width: 80%; /* 设置宽度为容器的80% */
+    margin: auto; /* 水平和垂直居中 */
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中文本 */
+    align-items: center; /* 垂直居中文本 */
+    text-align: center; /* 确保文本居中对齐 */
+  }
   .flex {
     height: 10vh; /* Adjust this value to change the header height */
     justify-content: space-between;
@@ -49,7 +60,6 @@
     padding: 1vh 0; /* Example padding that also scales with viewport height */
   }
 
-  /* Adjustments for inner elements might be necessary depending on your design */
   .nav-link {
     flex-grow: 1; /* Allow each nav-link to grow and fill the container */
     text-align: center; /* Center the text within each nav-link */
@@ -65,7 +75,5 @@
     margin: 0;
     padding: 0;
     border: none;
-    /* Use box-shadow for visual effects instead of border to avoid changing size */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 </style>

@@ -10,5 +10,7 @@
   "call": "call",
   "settings": "settings",
   "confirm" :  "confirm",
+  "please_input": "please input",
+  "please_select": "please select",
   "end": "end"
 }

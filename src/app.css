@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.full-width {
+
+    display: flex;
+    justify-content: space-between;
+    /* 使子元素横向铺满整个窗口 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 100%;
+    padding: 0 5% 0 1%;
+    margin-bottom: 30px;
+    background-color: hsl(0, 0%, 80%);
+    /* 比白色深20%的背景色 */
+}
+
+button {
+    background-color: hsl(210, 100%, 50%);
+    /* 蓝色背景 */
+    color: white;
+    /* 白色文本，以确保可读性 */
+    border: none;
+    /* 移除边框 */
+    padding: 10px 20px;
+    /* 添加一些内边距 */
+    border-radius: 5px;
+    /* 轻微的圆角边框 */
+    cursor: pointer;
+    /* 鼠标悬停时显示指针 */
+}
+
+button:hover {
+    background-color: hsl(210, 100%, 40%);
+    /* 鼠标悬停时的深蓝色 */
+}
