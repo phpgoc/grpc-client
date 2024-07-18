@@ -1,5 +1,5 @@
 import i18next from "i18next";
-import { createI18nStore } from "svelte-i18next";
+
 import en from "$i18n/en.json";
 import zh from "$i18n/zh.json";
 
