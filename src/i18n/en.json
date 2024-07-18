@@ -3,8 +3,12 @@
   "sign_in": "Sign in",
   "sign_up": "Sign up",
   "index": "index",
+  "grpc_base_url": "grpc base url",
+  "download_root": "download root",
+  "help": "help",
   "upload": "upload",
   "call": "call",
   "settings": "settings",
+  "confirm" :  "confirm",
   "end": "end"
 }

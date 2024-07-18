@@ -1,14 +1,15 @@
 <script lang="ts">
   import Header from "$components/Header.svelte";
   import { t } from "i18next";
-  import { availableLanguages, changeLanguage, lang } from "$lib/i18n.ts";
+  import { availableLanguages, changeLanguage, lang } from "$lib/i18n";
+
   import { Page } from "$lib/types";
 
   let selectedLanguage = lang; // 默认选择第一种语言
   let b = false;
   function handleLanguageChange() {
     // window.alert(selectedLanguage);
-    b = changeLanguage(selectedLanguage);
+    changeLanguage(selectedLanguage).then((r: boolean) => (b = r));
   }
 </script>
 
@@ -22,7 +23,7 @@
       >
     {/each}
   </select>
-  <button on:click={handleLanguageChange}>确定</button>
+  <button on:click={handleLanguageChange}>{t("confirm")}</button>
 </div>
 
 <div class="full-width">
@@ -40,5 +41,11 @@
   }
   .larger-text {
     font-size: 150%; /* 比其他元素大50% */
+  }
+  select {
+    width: 33%; /* Set width to 1/3 of the parent container */
+    padding: 8px; /* Optional: Adjust padding for better visual appearance */
+    margin: 0 auto; /* Center the select element if the parent container allows */
+    /* Add any additional styling here */
   }
 </style>

@@ -3,4 +3,5 @@ export enum Page {
   Upload = 2,
   Call = 3,
   Settings = 4,
+  Help = 5,
 }

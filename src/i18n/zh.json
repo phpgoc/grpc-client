@@ -3,8 +3,12 @@
   "sign_in": "登录",
   "sign_up": "注册",
   "index": "首页",
+  "grpc_base_url": "调用地址",
+  "download_root": "下载根路径",
+  "help": "帮助",
   "upload": "上传",
   "call": "调用",
   "settings": "设置",
+  "confirm": "确定",
   "end": "结束"
 }

@@ -4,7 +4,8 @@
   import { Page } from "$lib/types";
   import { Set, Get } from "$module/store.svelte";
   import { onMount } from "svelte";
-  import {initializeI18next} from "$lib/i18n";
+  import { initializeI18next } from "$lib/i18n";
+  import { t } from "i18next";
 
   let url: string | null = "";
   let download_path: string | null = "";
@@ -24,15 +25,15 @@
 <Header page={Page.Index} />
 
 <div class="full-width">
-  <p class="larger-text">调用地址</p>
-  <input type="text" bind:value={url} placeholder="请输入调用地址" />
+  <p class="larger-text">{t("grpc_base_url")}</p>
+  <input type="text" bind:value={url} placeholder={t("grpc_base_url")} />
 
-  <button on:click={handUrl}>确定</button>
+  <button on:click={handUrl}>{t("confirm")}</button>
 </div>
 <div class="full-width">
-  <p class="larger-text">下载根路径</p>
-  <input bind:value={download_path} placeholder="请输入下载根路径" />
-  <button on:click={handleDownloadPath}>确定</button>
+  <p class="larger-text">{t("download_root")}</p>
+  <input bind:value={download_path} placeholder={t("download_root")} />
+  <button on:click={handleDownloadPath}>{t("confirm")}</button>
 </div>
 
 <style>

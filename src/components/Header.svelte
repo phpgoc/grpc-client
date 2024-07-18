@@ -16,6 +16,12 @@
       : ''}">{t("index")}</a
   >
   <a
+    href="/help"
+    class="nav-link mx-2 text-gray-800 no-underline {page === Page.Help
+      ? 'active'
+      : ''}">{t("help")}</a
+  >
+  <a
     href="/upload"
     class="nav-link mx-2 text-gray-800 no-underline {page === Page.Upload
       ? 'active'
@@ -36,15 +42,30 @@
 </div>
 
 <style>
-  /* Tailwind CSS 已经包含了大部分所需的样式，如果有特别的样式需求可以在这里添加 */
+  .flex {
+    height: 10vh; /* Adjust this value to change the header height */
+    justify-content: space-between;
+    background-color: #f5f7fa;
+    padding: 1vh 0; /* Example padding that also scales with viewport height */
+  }
+
+  /* Adjustments for inner elements might be necessary depending on your design */
+  .nav-link {
+    flex-grow: 1; /* Allow each nav-link to grow and fill the container */
+    text-align: center; /* Center the text within each nav-link */
+    /* Other styles remain unchanged */
+  }
   .nav-link:hover {
     text-decoration: underline;
   }
   .active {
     color: #4a90e2; /* Bright blue color for text */
-    background-color: #f5f7fa; /* Light grey background */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #00ff00; /* Light grey background */
+    /* Ensure the element does not change the layout */
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* Use box-shadow for visual effects instead of border to avoid changing size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 </style>
