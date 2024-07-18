@@ -7,22 +7,5 @@
   "files.autoSave": "onFocusChange",
   "task.autoDetect": "on",
   "editor.formatOnSave": true, // 禁用VS Code内置的格式化以避免冲突
-  "[javascript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "workbench.action.tasks.runTask": "always"
-    }
-  },
-  "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "workbench.action.tasks.runTask": "always"
-    }
-  },
-  "[svelte]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "workbench.action.tasks.runTask": "always"
-    }
-  }
+
 }

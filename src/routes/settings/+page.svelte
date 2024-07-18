@@ -4,12 +4,14 @@
   import { availableLanguages, changeLanguage, lang } from "$lib/i18n";
 
   import { Page } from "$lib/types";
+  import { goto } from "$app/navigation";
 
   let selectedLanguage = lang; // 默认选择第一种语言
-  let b = false;
   function handleLanguageChange() {
     // window.alert(selectedLanguage);
-    changeLanguage(selectedLanguage).then((r: boolean) => (b = r));
+    changeLanguage(selectedLanguage).then(() => {
+      goto("/?r=_settings");
+    });
   }
 </script>
 
@@ -24,10 +26,6 @@
     {/each}
   </select>
   <button on:click={handleLanguageChange}>{t("confirm")}</button>
-</div>
-
-<div class="full-width">
-  {b}
 </div>
 
 <style>

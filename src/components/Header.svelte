@@ -10,7 +10,7 @@
 
 <div class="flex justify-between bg-gray-100 p-5">
   <a
-    href="/"
+    href="/index"
     class="nav-link mx-2 text-gray-800 no-underline {page === Page.Index
       ? 'active'
       : ''}">{t("index")}</a
