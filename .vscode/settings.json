@@ -1,6 +1,28 @@
 {
   "svelte.enable-ts-plugin": true,
-  "i18n-ally.localesPaths": [
-    "src/i18n"
-  ]
+  "i18n-ally.localesPaths": ["src/i18n"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "files.autoSave": "onFocusChange",
+  "task.autoDetect": "on",
+  "editor.formatOnSave": true, // 禁用VS Code内置的格式化以避免冲突
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "workbench.action.tasks.runTask": "always"
+    }
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "workbench.action.tasks.runTask": "always"
+    }
+  },
+  "[svelte]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "workbench.action.tasks.runTask": "always"
+    }
+  }
 }

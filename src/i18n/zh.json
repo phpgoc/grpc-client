@@ -1,10 +1,10 @@
 {
-    "page_title": "页头",
-    "sign_in": "登录",
-    "sign_up": "注册",
-    "index": "首页",
-    "upload": "上传",
-    "call": "调用",
-    "settings": "设置",
-    "end": "结束"
+  "page_title": "页头",
+  "sign_in": "登录",
+  "sign_up": "注册",
+  "index": "首页",
+  "upload": "上传",
+  "call": "调用",
+  "settings": "设置",
+  "end": "结束"
 }
