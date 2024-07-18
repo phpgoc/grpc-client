@@ -18,6 +18,9 @@ const config = {
       $i18n: path.resolve("./src/i18n"),
     },
   },
+  compilerOptions: {
+    errorMode: "throw",
+  },
 };
 
 export default config;

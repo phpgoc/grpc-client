@@ -8,28 +8,28 @@
   export let page: Page = Page.Index;
 </script>
 
-<div class="flex justify-between p-5 bg-gray-100">
+<div class="flex justify-between bg-gray-100 p-5">
   <a
     href="/"
-    class="nav-link no-underline text-gray-800 mx-2 {page === Page.Index
+    class="nav-link mx-2 text-gray-800 no-underline {page === Page.Index
       ? 'active'
       : ''}">{t("index")}</a
   >
   <a
     href="/upload"
-    class="nav-link no-underline text-gray-800 mx-2 {page === Page.Upload
+    class="nav-link mx-2 text-gray-800 no-underline {page === Page.Upload
       ? 'active'
       : ''}">{t("upload")}</a
   >
   <a
     href="/call"
-    class="nav-link no-underline text-gray-800 mx-2 {page === Page.Call
+    class="nav-link mx-2 text-gray-800 no-underline {page === Page.Call
       ? 'active'
       : ''}">{t("call")}</a
   >
   <a
     href="/settings"
-    class="nav-link no-underline text-gray-800 mx-2 {page === Page.Settings
+    class="nav-link mx-2 text-gray-800 no-underline {page === Page.Settings
       ? 'active'
       : ''}">{t("settings")}</a
   >
