@@ -1,0 +1,9 @@
+version: '3'
+services:
+  grpcweb:
+    build:
+      context: ./docker/grpcweb
+      dockerfile: Dockerfile
+      args:
+        - BUILDKIT_INLINE_CACHE=0
+    image: grpc-client-grpcweb
