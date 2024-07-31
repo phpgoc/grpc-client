@@ -47,6 +47,6 @@ echo "gen these: ""$find_files"
 docker run --rm -v ${cmd_dir}/../:/src $image_name \
   protoc \
   -I/src/proto \
-  --js_out=import_style=commonjs:"$out_dir_in_docker" \
+  --js_out=import_style=clou:"$out_dir_in_docker" \
   --grpc-web_out=import_style=commonjs,mode=grpcwebtext:"$out_dir_in_docker" \
   $find_files
